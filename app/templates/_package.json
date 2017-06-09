@@ -14,7 +14,10 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "xo && <% if (nyc) { %>nyc <% } %>ava"
+    "prettier": "prettier --write --single-quote --no-semi '**/*.js'",
+		"lint": "eslint .",
+    "test": "npm run lint && <% if (nyc) { %>nyc <% } %>ava",
+		"test:watch": "ava --watch"
   },
   "files": [
     "index.js"<% if (cli) { %>,
