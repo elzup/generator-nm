@@ -1,10 +1,18 @@
-# generator-nm [![Build Status](https://travis-ci.org/sindresorhus/generator-nm.svg?branch=master)](https://travis-ci.org/sindresorhus/generator-nm)
+# @akameco/generator-nm [![Build Status](https://travis-ci.org/akameco/generator-nm.svg?branch=master)](https://travis-ci.org/akameco/generator-nm)
 
 > Scaffold out a [node module](https://github.com/sindresorhus/node-module-boilerplate)
 
 Optionally with a [CLI](http://en.wikipedia.org/wiki/Command-line_interface).
 
-This is what I use for [my own modules](https://www.npmjs.com/~sindresorhus).
+Fork from [sindresorhus/generator-nm](https://github.com/sindresorhus/generator-nm)
+
+
+Diffs
+
+- prettier
+- flowconfig
+- space
+- eslint
 
 ![](screenshot.png)
 
@@ -12,7 +20,7 @@ This is what I use for [my own modules](https://www.npmjs.com/~sindresorhus).
 ## Install
 
 ```
-$ npm install --global yo generator-nm
+$ npm install --global yo @akameco/generator-nm
 ```
 
 
@@ -52,4 +60,4 @@ Use [chalk](https://github.com/sindresorhus/chalk) if you want colors in your CL
 
 ## License
 
-MIT © [Sindre Sorhus](https://sindresorhus.com)
+MIT © [akameco](https://akameco.github.io)

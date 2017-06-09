@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-'use strict';
-const meow = require('meow');
-const <%= camelModuleName %> = require('.');
+'use strict'
+const meow = require('meow')
+const <%= camelModuleName %> = require('.')
 
 const cli = meow(`
 	Usage
@@ -15,6 +15,6 @@ const cli = meow(`
 	  unicorns & rainbows
 	  $ <%= repoName %> ponies
 	  ponies & rainbows
-`);
+`)
 
-console.log(<%= camelModuleName %>(cli.input[0] || 'unicorns'));
+console.log(<%= camelModuleName %>(cli.input[0] || 'unicorns'))
