@@ -129,6 +129,7 @@ module.exports = class extends Generator {
       }
 
       mv('editorconfig', '.editorconfig')
+      mv('eslintrc', '.eslintrc')
       mv('flowconfig', '.flowconfig')
       mv('gitattributes', '.gitattributes')
       mv('gitignore', '.gitignore')
