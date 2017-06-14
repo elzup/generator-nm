@@ -15,9 +15,9 @@
   },
   "scripts": {
     "prettier": "prettier --write --single-quote --no-semi '**/*.js'",
-		"lint": "eslint .",
-    "test": "npm run lint && <% if (nyc) { %>nyc <% } %>ava",
-		"test:watch": "ava --watch"
+    "lint": "eslint .",
+    "test": "<% if (nyc) { %>nyc <% } %>jest",
+    "test:watch": "jest --watch"
   },
   "files": [
     "index.js"<% if (cli) { %>,
@@ -32,11 +32,11 @@
     "meow": "^3.7.0"
   <% } %>},
   "devDependencies": {
-    "ava": "^0.19.1",<% if (coveralls) { %>
+    "eslint": "^4.0.0",
+    "eslint-config-precure": "^0.6.0",
+    "jest": "^0.20.4",<% if (coveralls) { %>
     "coveralls": "^2.11.12",<% } %><% if (nyc) { %>
     "nyc": "^10.0.0",<% } %>
-    "eslint": "^3.19.0",
-    "eslint-config-precure": "^0.5.1",
     "prettier": "^1.4.4"
   }<% if (coveralls) { %>,
   "nyc": {
