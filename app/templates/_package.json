@@ -34,7 +34,7 @@
   "devDependencies": {
     "eslint": "^4.0.0",
     "eslint-config-precure": "^0.6.0",
-    "jest": "^0.20.4",<% if (coveralls) { %>
+    "jest": "^20.0.4",<% if (coveralls) { %>
     "coveralls": "^2.11.12",<% } %><% if (nyc) { %>
     "nyc": "^10.0.0",<% } %>
     "prettier": "^1.4.4"
