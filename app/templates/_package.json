@@ -14,9 +14,9 @@
     "node": ">=4"
   },
   "scripts": {
-    "prettier": "prettier --write --single-quote --no-semi '**/*.js'",
+    "prettier": "prettier --write '**/*.js'",
     "lint": "eslint .",
-    "test": "<% if (nyc) { %>nyc <% } %>jest",
+    "test": "jest",
     "test:watch": "jest --watch"
   },
   "files": [
@@ -32,17 +32,9 @@
     "meow": "^3.7.0"
   <% } %>},
   "devDependencies": {
-    "eslint": "^4.0.0",
-    "eslint-config-precure": "^0.6.0",
-    "jest": "^20.0.4",<% if (coveralls) { %>
-    "coveralls": "^2.11.12",<% } %><% if (nyc) { %>
-    "nyc": "^10.0.0",<% } %>
-    "prettier": "^1.4.4"
-  }<% if (coveralls) { %>,
-  "nyc": {
-    "reporter": [
-      "lcov",
-      "text"
-    ]
-  }<% } %>
+    "eslint": "^4.6.0",
+    "eslint-config-precure": "^0.8.0",
+    "jest": "^20.0.4",
+    "prettier": "^1.6.1"
+  }
 }

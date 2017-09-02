@@ -19,16 +19,6 @@ module.exports = class extends Generator {
       type: 'boolean',
       desc: 'Add a CLI',
     })
-
-    this.option('coverage', {
-      type: 'boolean',
-      desc: 'Add code coverage with nyc',
-    })
-
-    this.option('coveralls', {
-      type: 'boolean',
-      desc: 'Upload coverage to coveralls.io (implies coverage)',
-    })
   }
   init() {
     return this.prompt([
@@ -65,24 +55,6 @@ module.exports = class extends Generator {
         default: Boolean(this.options.cli),
         when: () => this.options.cli === undefined,
       },
-      {
-        name: 'nyc',
-        message: 'Do you need code coverage?',
-        type: 'confirm',
-        default: Boolean(this.options.coveralls || this.options.coverage),
-        when: () =>
-          this.options.coverage === undefined &&
-          this.options.coveralls === undefined,
-      },
-      {
-        name: 'coveralls',
-        message: 'Upload coverage to coveralls.io?',
-        type: 'confirm',
-        default: false,
-        when: x =>
-          (x.nyc || this.options.coverage) &&
-          this.options.coveralls === undefined,
-      },
     ]).then(props => {
       const or = (option, prop) =>
         this.options[option] === undefined
@@ -90,8 +62,6 @@ module.exports = class extends Generator {
           : this.options[option]
 
       const cli = or('cli')
-      const coveralls = or('coveralls')
-      const nyc = coveralls || or('coverage', 'nyc')
 
       const repoName = utils.repoName(props.moduleName)
 
@@ -106,8 +76,6 @@ module.exports = class extends Generator {
         website: props.website,
         humanizedWebsite: humanizeUrl(props.website),
         cli,
-        nyc,
-        coveralls,
       }
 
       const mv = (from, to) => {
@@ -134,6 +102,7 @@ module.exports = class extends Generator {
       mv('gitattributes', '.gitattributes')
       mv('gitignore', '.gitignore')
       mv('travis.yml', '.travis.yml')
+      mv('prettierrc', '.prettierrc')
       mv('_package.json', 'package.json')
     })
   }
