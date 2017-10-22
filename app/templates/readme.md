@@ -1,5 +1,5 @@
 # <%= repoName %>
-[![Build Status](https://travis-ci.org/<%= githubUsername %>/<%= repoName %>.svg?branch=master)](https://travis-ci.org/<%= githubUsername %>/<%= repoName %>)
+[![Build Status](https://travis-ci.org/akameco/<%= repoName %>.svg?branch=master)](https://travis-ci.org/akameco/<%= repoName %>)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 > <%= moduleDescription %>
@@ -67,4 +67,4 @@ $ <%= repoName %> --help
 
 ## License
 
-MIT © [<%= name %>](<%= website %>)
+MIT © [akameco](http://akameco.github.io)

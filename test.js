@@ -17,8 +17,6 @@ test.beforeEach(async () => {
 test.serial('generates expected files', async () => {
   helpers.mockPrompt(generator, {
     moduleName: 'test',
-    githubUsername: 'test',
-    website: 'test.com',
     cli: false,
   })
 
@@ -45,8 +43,6 @@ test.serial('generates expected files', async () => {
 test.serial('CLI option', async () => {
   helpers.mockPrompt(generator, {
     moduleName: 'test',
-    githubUsername: 'test',
-    website: 'test.com',
     cli: true,
   })
 
@@ -80,8 +76,6 @@ test.serial('prompts for description', async () => {
   helpers.mockPrompt(generator, {
     moduleName: 'test',
     moduleDescription: 'foo',
-    githubUsername: 'test',
-    website: 'test.com',
     cli: false,
   })
 
@@ -94,8 +88,6 @@ test.serial('prompts for description', async () => {
 test.serial('defaults to superb description', async () => {
   helpers.mockPrompt(generator, {
     moduleName: 'test',
-    githubUsername: 'test',
-    website: 'test.com',
     cli: false,
   })
 

@@ -18,9 +18,7 @@
     "test": "npm run lint && ava",
     "test:watch": "ava --watch"
   },
-  "files": [
-    "app"
-  ],
+  "files": ["app"],
   "keywords": [
     "yeoman-generator",
     "plugin",
@@ -34,10 +32,8 @@
     "init"
   ],
   "dependencies": {
-    "humanize-url": "^1.0.1",
     "is-scoped": "^1.0.0",
-    "normalize-url": "^1.9.1",
-    "superb": "^1.3.0",
+    "superb": "^2.0.0",
     "underscore.string": "^3.3.4",
     "yeoman-generator": "^2.0.1"
   },
