@@ -1,6 +1,6 @@
 {
   "name": "@akameco/generator-nm",
-  "version": "4.2.0",
+  "version": "5.0.0",
   "description": "Scaffold out a node module",
   "license": "MIT",
   "repository": "akameco/generator-nm",
@@ -18,7 +18,9 @@
     "test": "npm run lint && ava",
     "test:watch": "ava --watch"
   },
-  "files": ["app"],
+  "files": [
+    "app"
+  ],
   "keywords": [
     "yeoman-generator",
     "plugin",
