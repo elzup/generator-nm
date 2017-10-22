@@ -12,12 +12,12 @@
   },
   "scripts": {
 		"add-contributor": "all-contributors add",
+    "precommit": "lint-staged",
 		"fmt": "prettier --write '**/*.{js,json}'",
 		"flow": "flow",
     "lint": "eslint .",
     "test": "jest",
-		"test:watch": "jest --watch",
-		"precommit": "lint-staged",
+    "test:watch": "jest --watch"
 	},
 	"lint-staged": {
     "*.js": ["fmt", "lint", "test", "git add"],
