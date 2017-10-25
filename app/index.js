@@ -73,6 +73,7 @@ module.exports = class extends Generator {
         )
       }
 
+      mv('all-contributorsrc', '.all-contributorsrc')
       mv('editorconfig', '.editorconfig')
       mv('eslintrc', '.eslintrc')
       mv('flowconfig', '.flowconfig')

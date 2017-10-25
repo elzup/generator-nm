@@ -27,6 +27,7 @@ test.serial('generates expected files', async () => {
     '.git',
     '.eslintrc',
     '.gitattributes',
+    '.all-contributorsrc',
     '.gitignore',
     '.travis.yml',
     '.flowconfig',
