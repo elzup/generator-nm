@@ -98,6 +98,7 @@ module.exports = class extends Generator {
       'all-contributors-cli',
       'husky',
       'lint-staged',
+      'flow-bin',
     ]
     this.yarnInstall(devPkgs, { dev: true })
   }
