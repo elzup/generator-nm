@@ -8,7 +8,7 @@
   <% if (cli) { %>
   "bin": "cli.js",<% } %>
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "scripts": {
 		"add-contributor": "all-contributors add",
