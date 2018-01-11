@@ -82,6 +82,7 @@ module.exports = class extends Generator {
       mv('travis.yml', '.travis.yml')
       mv('prettierrc', '.prettierrc')
       mv('prettierignore', '.prettierignore')
+      mv('eslintignore', '.eslintignore')
       mv('_package.json', 'package.json')
       mv('github/ISSUE_TEMPLATE.md', '.github/ISSUE_TEMPLATE.md')
       mv('github/PULL_REQUEST_TEMPLATE.md', '.github/PULL_REQUEST_TEMPLATE.md')
