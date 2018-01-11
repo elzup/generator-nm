@@ -36,6 +36,9 @@ test.serial('generates expected files', async () => {
     'package.json',
     'readme.md',
     'test.js',
+    '.github/ISSUE_TEMPLATE.md',
+    '.github/PULL_REQUEST_TEMPLATE.md',
+    'flow-typed/npm/jest_v22.x.x.js',
   ])
 
   assert.noFile('cli.js')
