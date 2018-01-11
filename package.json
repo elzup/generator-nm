@@ -1,6 +1,6 @@
 {
   "name": "@akameco/generator-nm",
-  "version": "5.3.0",
+  "version": "5.4.0",
   "description": "Scaffold out a node module",
   "license": "MIT",
   "repository": "akameco/generator-nm",
