@@ -16,6 +16,11 @@ module.exports = class extends Generator {
       type: 'boolean',
       desc: 'Add a CLI',
     })
+
+    this.option('cov', {
+      type: 'boolean',
+      desc: 'Add a coverage',
+    })
   }
   init() {
     return this.prompt([
@@ -37,6 +42,13 @@ module.exports = class extends Generator {
         default: Boolean(this.options.cli),
         when: () => this.options.cli === undefined,
       },
+      {
+        name: 'cov',
+        message: 'Do you need a covarage?',
+        type: 'confirm',
+        default: Boolean(this.options.cov),
+        when: () => this.options.cov === undefined,
+      },
     ]).then(props => {
       const or = (option, prop) =>
         this.options[option] === undefined
@@ -44,6 +56,7 @@ module.exports = class extends Generator {
           : this.options[option]
 
       const cli = or('cli')
+      const cov = or('cov')
 
       const repoName = utils.repoName(props.moduleName)
 
@@ -53,6 +66,7 @@ module.exports = class extends Generator {
         camelModuleName: _s.camelize(repoName),
         repoName,
         cli,
+        cov,
       }
 
       const mv = (from, to) => {

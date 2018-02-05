@@ -18,6 +18,7 @@ test.serial('generates expected files', async () => {
   helpers.mockPrompt(generator, {
     moduleName: 'test',
     cli: false,
+    cov: false,
   })
 
   await pify(generator.run.bind(generator))()
@@ -48,6 +49,7 @@ test.serial('CLI option', async () => {
   helpers.mockPrompt(generator, {
     moduleName: 'test',
     cli: true,
+    cov: true,
   })
 
   await pify(generator.run.bind(generator))()
@@ -81,6 +83,7 @@ test.serial('prompts for description', async () => {
     moduleName: 'test',
     moduleDescription: 'foo',
     cli: false,
+    cov: false,
   })
 
   await pify(generator.run.bind(generator))()
@@ -93,6 +96,7 @@ test.serial('defaults to superb description', async () => {
   helpers.mockPrompt(generator, {
     moduleName: 'test',
     cli: false,
+    cov: false,
   })
 
   await pify(generator.run.bind(generator))()
