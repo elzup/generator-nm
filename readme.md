@@ -1,30 +1,28 @@
-# @akameco/generator-nm [![Build Status](https://travis-ci.org/akameco/generator-nm.svg?branch=master)](https://travis-ci.org/akameco/generator-nm)
+# @elzup/generator-nm [![Build Status](https://travis-ci.org/elzup/generator-nm.svg?branch=master)](https://travis-ci.org/elzup/generator-nm)
 
 > Scaffold out a [node module](https://github.com/sindresorhus/node-module-boilerplate)
 
 Optionally with a [CLI](http://en.wikipedia.org/wiki/Command-line_interface).
 
 Fork from [sindresorhus/generator-nm](https://github.com/sindresorhus/generator-nm)
-
+Fork from [elzup/generator-nm](https://github.com/elzup/generator-nm)
 
 Diffs
 
-- jest
-- prettier
-- flow
-- eslint/eslint-config-precure
-- hasky/lint-staged
-- all-contirbutors
+* jest
+* prettier
+* flow
+* eslint/eslint-config-precure
+* hasky/lint-staged
+* all-contirbutors
 
 ![](screenshot.png)
-
 
 ## Install
 
 ```
-$ npm install --global yo @akameco/generator-nm
+$ npm install --global yo @elzup/generator-nm
 ```
-
 
 ## Usage
 
@@ -55,7 +53,6 @@ $ yo nm --help
 
 Use [chalk](https://github.com/sindresorhus/chalk) if you want colors in your CLI.
 
-
 ## License
 
-MIT © [akameco](https://akameco.github.io)
+MIT © [elzup](https://elzup.com)

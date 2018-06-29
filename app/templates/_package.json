@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "description": "<%= moduleDescription %>",
   "license": "MIT",
-  "repository": "akameco/<%= repoName %>",
-  "author": "akameco <akameco.t@gmail.com> (akameco.github.io)",
+  "repository": "elzup/<%= repoName %>",
+  "author": "elzup <guild0105@gmail.com> (elzup.com)",
   <% if (cli) { %>
   "bin": "cli.js",<% } %>
   "engines": {
