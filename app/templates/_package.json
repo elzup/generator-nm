@@ -12,14 +12,17 @@
     "node": ">=6"
   },
   "scripts": {
+		"build": "babel src --out-dir dist && npm run prepack:flow",
+		"deploy": "npm run build && yarn publish",
+		"prepack:flow": "flow-copy-source src dist",
 		"add-contributor": "all-contributors add",<% if (cov) { %>
     "add:cov": "cat ./coverage/lcov.info | coveralls",<% } %>
     "precommit": "yarn flow && lint-staged",
 		"fmt": "prettier --write '**/*.{js,json,md}'",
 		"flow": "flow",
     "lint": "eslint .",
-    "test": "jest",
-    "test:cov": "jest --coverage --ci --runInBand",
+    "test": "jest src",
+    "test:cov": "jest src --coverage --ci --runInBand",
     "test:ci": "yarn flow && yarn lint && yarn test:cov<% if (cov) { %> && npm run add:cov<% } %>"
 	},
 	"lint-staged": {
