@@ -1,7 +1,7 @@
 // @flow
 'use strict'
 
-module.exports = (input /*: string */, opts /*: { postfix: ?string } */ = {}) => {
+module.exports = (input: string, opts: { postfix: ?string } = {}) => {
   if (typeof input !== 'string') {
     throw new TypeError(`Expected a string, got ${typeof input}`)
   }

@@ -32,17 +32,18 @@ test.serial('generates expected files', async () => {
     '.gitignore',
     '.travis.yml',
     '.flowconfig',
-    'index.js',
+    '.babelrc',
+    'src/index.js',
+    'src/test.js',
     'license',
     'package.json',
     'readme.md',
-    'test.js',
     '.github/ISSUE_TEMPLATE.md',
     '.github/PULL_REQUEST_TEMPLATE.md',
     'flow-typed/npm/jest_v22.x.x.js',
   ])
 
-  assert.noFile('cli.js')
+  assert.noFile('src/cli.js')
 })
 
 test.serial('CLI option', async () => {
@@ -54,9 +55,9 @@ test.serial('CLI option', async () => {
 
   await pify(generator.run.bind(generator))()
 
-  assert.file('cli.js')
+  assert.file('src/cli.js')
   assert.fileContent('package.json', /"bin":/)
-  assert.fileContent('package.json', /"bin": "cli.js"/)
+  assert.fileContent('package.json', /"bin": "dist\/cli.js"/)
   assert.fileContent('package.json', /"meow"/)
 })
 

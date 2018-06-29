@@ -81,8 +81,8 @@ module.exports = class extends Generator {
 
       if (cli) {
         this.fs.copyTpl(
-          this.templatePath('cli.js'),
-          this.destinationPath('cli.js'),
+          this.templatePath('src/cli.js'),
+          this.destinationPath('src/cli.js'),
           tpl
         )
       }
@@ -96,6 +96,7 @@ module.exports = class extends Generator {
       mv('travis.yml', '.travis.yml')
       mv('prettierrc', '.prettierrc')
       mv('prettierignore', '.prettierignore')
+      mv('babelrc', '.babelrc')
       mv('eslintignore', '.eslintignore')
       mv('_package.json', 'package.json')
       mv('github/ISSUE_TEMPLATE.md', '.github/ISSUE_TEMPLATE.md')

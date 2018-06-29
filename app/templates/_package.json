@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "description": "<%= moduleDescription %>",
   "license": "MIT",
+	"main": "dist/index.js",
   "repository": "elzup/<%= repoName %>",
   "author": "elzup <guild0105@gmail.com> (elzup.com)",
   <% if (cli) { %>
-  "bin": "cli.js",<% } %>
+  "bin": "dist/cli.js",<% } %>
   "engines": {
     "node": ">=6"
   },
@@ -25,14 +26,23 @@
     "*.{js,json,md}": ["prettier --write", "git add"]
   },
   "files": [
-    "index.js"<% if (cli) { %>,
-    "cli.js"<% } %>
+    "dist"
   ],
   "keywords": [<% if (cli) { %>
     "cli-app",
     "cli",<% } %>
     ""
   ],
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.0.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.74.0",
+    "flow-copy-source": "^2.0.0",
+    "jest": "^23.1.0"
+  },
   "dependencies": {<% if (cli) { %>
     "meow": "^3.7.0"
   <% } %>}
