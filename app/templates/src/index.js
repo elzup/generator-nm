@@ -1,5 +1,4 @@
 // @flow
-'use strict'
 
 module.exports = (input: string, opts: { postfix: ?string } = {}) => {
   if (typeof input !== 'string') {
